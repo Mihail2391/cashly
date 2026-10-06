@@ -1,0 +1,255 @@
+.categories {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ФОРМА */
+
+.categories-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 24px;
+  padding: 18px;
+
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+
+  background: #0f1b2d;
+}
+
+.categories-form input,
+.categories-form select {
+  padding: 11px 13px;
+
+  border: 1px solid #263449;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #0a1525;
+  color: white;
+}
+
+.categories-form input {
+  flex: 1;
+}
+
+.categories-form input::placeholder {
+  color: #64748b;
+}
+
+.categories-form input:focus,
+.categories-form select:focus {
+  border-color: #3b82f6;
+}
+
+.category-submit {
+  padding: 11px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-weight: 600;
+}
+
+.category-submit:hover {
+  background: #1d4ed8;
+}
+
+.category-cancel {
+  padding: 11px 16px;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #cbd5e1;
+}
+
+/* ОШИБКА */
+
+.category-error {
+  margin: -10px 0 20px;
+
+  padding: 12px 14px;
+
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  border-radius: 9px;
+
+  background: rgba(244, 63, 94, 0.1);
+  color: #fb7185;
+}
+
+/* СПИСОК КАТЕГОРИЙ */
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-width: 0;
+
+  padding: 18px;
+
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+
+  background: #0f1b2d;
+}
+
+.category-info {
+  min-width: 0;
+}
+
+.category-name {
+  margin-bottom: 6px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category-type {
+  display: inline-block;
+
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.category-type.expense {
+  background: rgba(244, 63, 94, 0.12);
+  color: #fb7185;
+}
+
+.category-type.income {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+}
+
+/* КНОПКИ */
+
+.category-actions {
+  display: flex;
+  gap: 8px;
+
+  margin-left: 16px;
+}
+
+.category-edit,
+.category-delete {
+  padding: 8px 10px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+}
+
+.category-edit {
+  border: 1px solid #334155;
+
+  background: #172337;
+  color: #e2e8f0;
+}
+
+.category-edit:hover {
+  background: #1e2d44;
+}
+
+.category-delete {
+  border: 1px solid rgba(244, 63, 94, 0.4);
+
+  background: rgba(244, 63, 94, 0.1);
+  color: #fb7185;
+}
+
+.category-delete:hover {
+  background: rgba(244, 63, 94, 0.18);
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media (max-width: 850px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .categories-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .category-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .category-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .category-actions button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .categories {
+    max-width: none;
+  }
+
+  .categories-form {
+    padding: 14px;
+  }
+
+  .categories-form input,
+  .categories-form select,
+  .category-submit,
+  .category-cancel {
+    width: 100%;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    align-items: stretch;
+    flex-direction: column;
+
+    gap: 16px;
+
+    padding: 15px;
+  }
+
+  .category-actions {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  .category-actions button {
+    flex: 1;
+  }
+}

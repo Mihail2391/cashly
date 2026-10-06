@@ -1,0 +1,286 @@
+.dashboard {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 28px;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+}
+
+.dashboard-subtitle {
+  margin: 0;
+  color: #94a3b8;
+}
+
+/* КАРТОЧКИ СВОДКИ */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.summary-card {
+  padding: 20px;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  background: #0f1b2d;
+}
+
+.summary-card h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.summary-card p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.summary-card.income {
+  background: #0b2926;
+}
+
+.summary-card.income h3,
+.summary-card.income p {
+  color: #34d399;
+}
+
+.summary-card.expense {
+  background: #301a22;
+}
+
+.summary-card.expense h3,
+.summary-card.expense p {
+  color: #fb7185;
+}
+
+.summary-card.balance {
+  background: #0d2342;
+}
+
+.summary-card.balance h3,
+.summary-card.balance p {
+  color: #60a5fa;
+}
+
+/* КНОПКА ДОБАВЛЕНИЯ */
+
+.dashboard-actions {
+  margin: 22px 0;
+}
+
+.add-operation-button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+
+  background: #2563eb;
+  color: white;
+
+  font-weight: 600;
+}
+
+.add-operation-button:hover {
+  background: #1d4ed8;
+}
+
+/* ГРАФИКИ */
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.chart-card {
+  min-width: 0;
+  padding: 20px;
+
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+
+  background: #0f1b2d;
+}
+
+.chart-card h2 {
+  margin: 0 0 18px;
+  font-size: 18px;
+}
+
+/* ПОСЛЕДНИЕ ОПЕРАЦИИ */
+
+.transactions-card {
+  margin-top: 16px;
+  padding: 20px;
+
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+
+  background: #0f1b2d;
+}
+
+.transactions-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+.transactions-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.show-all-button {
+  border: none;
+  background: transparent;
+  color: #60a5fa;
+}
+
+.transaction-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 120px;
+  align-items: center;
+  gap: 16px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #1e293b;
+}
+
+.transaction-row:last-child {
+  border-bottom: none;
+}
+
+.transaction-category {
+  font-weight: 600;
+}
+
+.transaction-description {
+  color: #94a3b8;
+}
+
+.transaction-amount {
+  text-align: right;
+  font-weight: 700;
+}
+
+.transaction-amount.income {
+  color: #34d399;
+}
+
+.transaction-amount.expense {
+  color: #fb7185;
+}
+
+.dashboard-transaction-info {
+  min-width: 0;
+  color: #64748b;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.dashboard-transaction-note {
+  color: #94a3b8;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-transaction-date {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    max-width: none;
+  }
+
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 25px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    margin-top: 20px;
+  }
+
+  .summary-card {
+    padding: 16px;
+  }
+
+  .summary-card p {
+    font-size: 24px;
+  }
+
+  .dashboard-actions {
+    margin: 14px 0;
+  }
+
+  .add-operation-button {
+    width: 100%;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card {
+    padding: 14px;
+    overflow: hidden;
+  }
+
+  .chart-card h2 {
+    font-size: 16px;
+  }
+
+  .transactions-card {
+    padding: 14px;
+  }
+
+  .transaction-row {
+    grid-template-columns: 1fr auto;
+    gap: 6px 12px;
+  }
+
+  .transaction-category {
+    grid-column: 1;
+  }
+
+  .transaction-amount {
+    grid-column: 2;
+    grid-row: 1;
+
+    white-space: nowrap;
+  }
+
+  .transaction-description {
+    grid-column: 1 / -1;
+  }
+}

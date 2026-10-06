@@ -1,0 +1,230 @@
+.stats-page {
+  width: 100%;
+  max-width: 1180px;
+}
+
+.stats-header {
+  margin-bottom: 24px;
+}
+
+.stats-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.stats-header p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+/* ПЕРИОД */
+
+.stats-period {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+
+  margin-bottom: 24px;
+  padding: 18px;
+
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+
+  background: #0f1b2d;
+}
+
+.stats-date-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.stats-date-group label {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.stats-date-group input {
+  padding: 10px 12px;
+
+  border: 1px solid #263449;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #0a1525;
+  color: white;
+}
+
+.stats-date-group input:focus {
+  border-color: #3b82f6;
+}
+
+.stats-show-button {
+  padding: 11px 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-weight: 600;
+}
+
+.stats-show-button:hover {
+  background: #1d4ed8;
+}
+
+/* КАРТОЧКИ */
+
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.stats-summary-card {
+  padding: 20px;
+
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+
+  background: #0f1b2d;
+}
+
+.stats-summary-card span {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.stats-summary-card strong {
+  font-size: 27px;
+}
+
+.stats-summary-card.income {
+  background: #0b2926;
+}
+
+.stats-summary-card.income strong {
+  color: #34d399;
+}
+
+.stats-summary-card.expense {
+  background: #301a22;
+}
+
+.stats-summary-card.expense strong {
+  color: #fb7185;
+}
+
+.stats-summary-card.balance {
+  background: #0d2342;
+}
+
+.stats-summary-card.balance strong {
+  color: #60a5fa;
+}
+
+/* НИЖНЯЯ ЧАСТЬ */
+
+.stats-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  gap: 16px;
+}
+
+.stats-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+
+  background: #0f1b2d;
+}
+
+.stats-card h2 {
+  margin: 0 0 20px;
+  font-size: 18px;
+}
+
+/* КАТЕГОРИИ */
+
+.stats-category-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-category-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #1e293b;
+}
+
+.stats-category-row:last-child {
+  border-bottom: none;
+}
+
+.stats-category-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats-category-name {
+  font-weight: 600;
+}
+
+.stats-category-type {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.stats-category-total {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.stats-category-total.income {
+  color: #34d399;
+}
+
+.stats-category-total.expense {
+  color: #fb7185;
+}
+
+.stats-empty {
+  color: #64748b;
+}
+
+/* АДАПТИВ */
+
+@media (max-width: 900px) {
+  .stats-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .stats-period {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
